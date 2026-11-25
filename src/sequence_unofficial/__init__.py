@@ -1,6 +1,6 @@
 """Unofficial client for the Sequence climbing-training web app. Not affiliated with Sequence."""
 
-__version__ = "0.1.0a2"
+__version__ = "0.1.0a3"
 
 from .client import PreparedRequest, Sequence  # noqa: E402
 from .errors import (  # noqa: E402

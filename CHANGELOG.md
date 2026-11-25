@@ -3,6 +3,13 @@
 All notable changes to this project are documented here. Format: [Keep a Changelog](https://keepachangelog.com/),
 versioning: [SemVer](https://semver.org/) (0.x: the API may change between minors).
 
+## [0.1.0a3] - 2026-11-25
+
+### Changed
+- macOS: the password is read with `/usr/bin/security` first (no repeated Keychain prompts), then `keyring`.
+- `httpx` is limited to `<1` (the 1.0 development builds drop APIs used here).
+- Project URLs added to the package metadata.
+
 ## [0.1.0a2] - 2026-11-25
 
 ### Fixed

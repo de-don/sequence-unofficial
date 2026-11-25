@@ -212,3 +212,40 @@ def test_logout_removes_session_file(
 
 def test_registry_has_no_write_endpoints() -> None:
     assert not any(e.is_write for e in ep.ENDPOINTS)
+
+
+def test_macos_security_tool_is_tried_before_keyring(monkeypatch: pytest.MonkeyPatch) -> None:
+    import subprocess
+    import sys
+    from types import SimpleNamespace
+
+    from sequence_unofficial import auth
+
+    calls: list[list[str]] = []
+
+    def fake_run(cmd: list[str], **_: Any) -> Any:
+        calls.append(cmd)
+        return SimpleNamespace(returncode=0, stdout="s3cret\n")
+
+    monkeypatch.setattr(sys, "platform", "darwin")
+    monkeypatch.setattr(subprocess, "run", fake_run)
+    creds = auth._from_keyring("me@example.com")  # pyright: ignore[reportPrivateUsage]
+    assert creds is not None and creds.password == "s3cret"
+    assert calls[0][0] == "/usr/bin/security" and "me@example.com" in calls[0]
+
+
+def test_missing_macos_entry_falls_back_to_none(monkeypatch: pytest.MonkeyPatch) -> None:
+    import subprocess
+    import sys
+    from types import SimpleNamespace
+
+    from sequence_unofficial import auth
+
+    monkeypatch.setattr(sys, "platform", "darwin")
+
+    def fake_run(*_: Any, **__: Any) -> Any:
+        return SimpleNamespace(returncode=44, stdout="")
+
+    monkeypatch.setattr(subprocess, "run", fake_run)
+    monkeypatch.setitem(sys.modules, "keyring", None)  # simulate keyring not installed
+    assert auth._from_keyring("me@example.com") is None  # pyright: ignore[reportPrivateUsage]

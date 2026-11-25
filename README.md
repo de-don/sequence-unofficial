@@ -23,7 +23,7 @@ Not on PyPI yet. From a checkout:
 
 ```bash
 pip install -e .            # Python >= 3.10
-pip install -e ".[keyring]" # optional: read the password from the OS keyring
+pip install -e ".[keyring]" # optional: read the password from the OS keyring (on macOS the `security` tool is tried first, no extra package needed)
 ```
 
 ## CLI

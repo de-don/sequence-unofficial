@@ -5,6 +5,8 @@ from __future__ import annotations
 import importlib
 import logging
 import os
+import subprocess
+import sys
 import threading
 import time
 from collections.abc import Callable
@@ -42,14 +44,39 @@ class Credentials:
 CredentialProvider = Callable[[], Credentials | None]
 
 
+def _from_macos_security(email: str) -> str | None:
+    """Read the password with Apple's ``security`` tool.
+
+    Entries created with ``security add-generic-password`` trust that signed tool, so reading them
+    this way never shows a Keychain prompt (a Python process with an ad-hoc signature would be asked
+    again after every interpreter update).
+    """
+    try:
+        done = subprocess.run(  # noqa: S603
+            ["/usr/bin/security", "find-generic-password", "-s", KEYRING_SERVICE, "-a", email, "-w"],  # noqa: S607
+            capture_output=True,
+            text=True,
+            timeout=10,
+            check=False,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    password = done.stdout.rstrip("\n")
+    return password if done.returncode == 0 and password else None
+
+
 def _from_keyring(email: str | None) -> Credentials | None:
     if not email:
         return None
-    try:
-        keyring: Any = importlib.import_module("keyring")
-        password = keyring.get_password(KEYRING_SERVICE, email)
-    except Exception:  # keyring not installed, or no usable backend
-        return None
+    password: str | None = None
+    if sys.platform == "darwin":
+        password = _from_macos_security(email)
+    if not password:
+        try:
+            keyring: Any = importlib.import_module("keyring")
+            password = keyring.get_password(KEYRING_SERVICE, email)
+        except Exception:  # keyring not installed, or no usable backend
+            return None
     return Credentials(email, password) if password else None
 
 
