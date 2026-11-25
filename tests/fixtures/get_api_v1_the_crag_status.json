@@ -1,0 +1,23 @@
+{
+ "method": "GET",
+ "path": "/api/v1/the_crag/status",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": {
+  "connected": false,
+  "account_name": null,
+  "connected_at": null,
+  "activity_id": null,
+  "last_synced_at": null,
+  "last_sync_status": null,
+  "last_sync_error": null,
+  "last_sync_summary": {},
+  "manual_sync_available_at": null,
+  "next_automatic_sync_at": null,
+  "sync_queued": false,
+  "sync_queued_at": null,
+  "auto_sync_due": false
+ },
+ "note": "planner"
+}

@@ -1,0 +1,30 @@
+{
+ "method": "GET",
+ "path": "/api/v1/metrics/activity_magic_number",
+ "status": 200,
+ "query": "activity_id=bd64857f-eb25-f961-8283-e044bb93d67e&weeks=10",
+ "request": null,
+ "response": [
+  {
+   "week_start_date": "text",
+   "week_end_date": "text",
+   "date_value": 1789430400000,
+   "date_text": "text",
+   "week": 10,
+   "total": 0,
+   "completed": 0,
+   "cumulative": 0
+  },
+  {
+   "week_start_date": "text",
+   "week_end_date": "text",
+   "date_value": 1790035200000,
+   "date_text": "text",
+   "week": 9,
+   "total": 0,
+   "completed": 0,
+   "cumulative": 0
+  }
+ ],
+ "note": "workout detail"
+}

@@ -1,0 +1,40 @@
+{
+ "method": "GET",
+ "path": "/api/v1/schedules/user_month",
+ "status": 200,
+ "query": "start_date_of_period=2026-08-31",
+ "request": null,
+ "response": [
+  {
+   "id": "fc580a7b-8e13-2dee-798c-08eef38ee095",
+   "num": null,
+   "title": "text",
+   "date": "2026-08-31",
+   "total_actual_duration": "0",
+   "biometrics": {
+    "present": false
+   },
+   "events": [],
+   "notes": [],
+   "tests": [],
+   "content": [],
+   "color_blocks": []
+  },
+  {
+   "id": "7f5cb748-e9b5-4ce5-f148-fd63114ddf38",
+   "num": null,
+   "title": "text",
+   "date": "2026-09-01",
+   "total_actual_duration": "0",
+   "biometrics": {
+    "present": false
+   },
+   "events": [],
+   "notes": [],
+   "tests": [],
+   "content": [],
+   "color_blocks": []
+  }
+ ],
+ "note": "planner"
+}

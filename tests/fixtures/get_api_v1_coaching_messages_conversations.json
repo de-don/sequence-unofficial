@@ -1,0 +1,9 @@
+{
+ "method": "GET",
+ "path": "/api/v1/coaching/messages/conversations",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": [],
+ "note": "live read-only run 2026-11-25"
+}

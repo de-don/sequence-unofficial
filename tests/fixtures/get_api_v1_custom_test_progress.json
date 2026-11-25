@@ -1,0 +1,96 @@
+{
+ "method": "GET",
+ "path": "/api/v1/custom_test_progress",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": [
+  {
+   "template": {
+    "id": "c3b04532-e7f6-baff-2b80-93592426aebe",
+    "user_id": "7c3af18a-4e88-538c-06d9-1355e3d50491",
+    "name": "text",
+    "description": "text",
+    "fields": [
+     {
+      "key": "d000483f-95d6-ce9e-1a9a-a706a2254dd6",
+      "type": "number",
+      "unit": "text",
+      "label": "text",
+      "options": null,
+      "ordered": false,
+      "headline": false,
+      "position": 0,
+      "required": false,
+      "direction": "higher",
+      "percentage": false,
+      "description": null
+     },
+     {
+      "key": "21024156-641d-b0fd-0eca-4faa65b2756b",
+      "type": "number",
+      "unit": "text",
+      "label": "text",
+      "options": null,
+      "ordered": false,
+      "headline": false,
+      "position": 1,
+      "required": false,
+      "direction": "neutral",
+      "percentage": false,
+      "description": null
+     }
+    ],
+    "fields_version": 1,
+    "coaching": false,
+    "source_template_id": null
+   },
+   "count": 0,
+   "latest_date": null
+  },
+  {
+   "template": {
+    "id": "cfb40528-2012-708e-96ff-9cb7dc539750",
+    "user_id": "7c3af18a-4e88-538c-06d9-1355e3d50491",
+    "name": "text",
+    "description": "text",
+    "fields": [
+     {
+      "key": "e23be0f6-6744-107e-91bd-fe717c10ab3f",
+      "type": "number",
+      "unit": "text",
+      "label": "text",
+      "options": null,
+      "ordered": false,
+      "headline": false,
+      "position": 0,
+      "required": false,
+      "direction": "higher",
+      "percentage": false,
+      "description": null
+     },
+     {
+      "key": "f13f3bf4-a514-9920-d777-afe2c60f1389",
+      "type": "number",
+      "unit": "text",
+      "label": "text",
+      "options": null,
+      "ordered": false,
+      "headline": false,
+      "position": 1,
+      "required": false,
+      "direction": "neutral",
+      "percentage": false,
+      "description": null
+     }
+    ],
+    "fields_version": 1,
+    "coaching": false,
+    "source_template_id": null
+   },
+   "count": 0,
+   "latest_date": null
+  }
+ ],
+ "note": "live read-only run 2026-11-25"
+}

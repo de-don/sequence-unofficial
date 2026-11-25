@@ -1,0 +1,52 @@
+{
+ "method": "GET",
+ "path": "/api/v1/exercise_library_items",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": [
+  {
+   "id": "efea3420-71ee-0d79-1e4f-22602e198027",
+   "name": "4x4",
+   "description": null,
+   "thumbnail_url": null,
+   "category": "reps_only",
+   "default_weight_unit": "kg",
+   "default_distance_unit": "km",
+   "custom": true,
+   "user_id": "7c3af18a-4e88-538c-06d9-1355e3d50491",
+   "source_exercise_library_item_id": "fca0ce04-3c61-7ab5-722d-9a5152a104f6",
+   "usage_count": 1,
+   "usage": {
+    "total": 1,
+    "workout_exercises": 1,
+    "workout_alternates": 0,
+    "coaching_workout_exercises": 0,
+    "coaching_workout_alternates": 0
+   },
+   "progression_options": []
+  },
+  {
+   "id": "12373612-890f-cc87-4de1-8c62d00d2c9c",
+   "name": "text",
+   "description": "text",
+   "thumbnail_url": null,
+   "category": "interval",
+   "default_weight_unit": "kg",
+   "default_distance_unit": "km",
+   "custom": false,
+   "user_id": null,
+   "source_exercise_library_item_id": null,
+   "usage_count": 0,
+   "usage": {
+    "total": 0,
+    "workout_exercises": 0,
+    "workout_alternates": 0,
+    "coaching_workout_exercises": 0,
+    "coaching_workout_alternates": 0
+   },
+   "progression_options": []
+  }
+ ],
+ "note": "live read-only run 2026-11-25"
+}

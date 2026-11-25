@@ -1,0 +1,30 @@
+{
+ "method": "GET",
+ "path": "/api/v1/categories",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": [
+  {
+   "id": "148cfbf3-ff05-bf36-f859-314e5047c4b0",
+   "user_id": "7c3af18a-4e88-538c-06d9-1355e3d50491",
+   "name": "text",
+   "description": null,
+   "archived": false,
+   "templated_category_id": "bd162d0e-ec0f-40d5-3400-e984e26ba0d5",
+   "templated_schedule_id": null,
+   "hex_colour": "text"
+  },
+  {
+   "id": "caf2809b-48f8-2bee-1d78-d999f7532fb2",
+   "user_id": "7c3af18a-4e88-538c-06d9-1355e3d50491",
+   "name": "text",
+   "description": null,
+   "archived": false,
+   "templated_category_id": "3a0aa693-18b8-7c5d-0096-2fee601899e3",
+   "templated_schedule_id": null,
+   "hex_colour": "text"
+  }
+ ],
+ "note": "live read-only run 2026-11-25"
+}

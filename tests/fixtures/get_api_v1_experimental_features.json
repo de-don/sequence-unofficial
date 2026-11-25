@@ -1,0 +1,14 @@
+{
+ "method": "GET",
+ "path": "/api/v1/experimental_features",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": {
+  "assistant": {
+   "eligible": false,
+   "enabled": false
+  }
+ },
+ "note": "settings"
+}

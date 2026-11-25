@@ -1,0 +1,50 @@
+{
+ "method": "POST",
+ "path": "/signin",
+ "status": 200,
+ "query": "",
+ "request": {
+  "email": "user@example.com",
+  "password": "[REDACTED]"
+ },
+ "response": {
+  "user": {
+   "name": "text",
+   "email": "user@example.com",
+   "email_verified": true,
+   "subscribed": false,
+   "plan": "text",
+   "valid": true,
+   "settings": {
+    "theme": "light",
+    "time_zone": "text",
+    "weight_unit": "kg",
+    "compact_view": false,
+    "planner_view": "month",
+    "distance_unit": "km",
+    "emoji_skin_tone": "none",
+    "daily_email_time": "0800",
+    "initial_template": "default",
+    "weekly_email_day": "monday",
+    "assistant_enabled": false,
+    "send_daily_emails": false,
+    "weekly_email_time": "0630",
+    "send_weekly_emails": true,
+    "show_total_duration": false,
+    "chart_prefs_biometrics": [],
+    "has_seen_onboarding_tour": false,
+    "manual_timer_prep_enabled": true,
+    "created_from_plan_purchase": false,
+    "chart_prefs_custom_measures": [],
+    "default_timer_continues_to_rest": true,
+    "password_set_from_plan_purchase": "text",
+    "default_rest_between_sets_seconds": 120,
+    "default_rest_between_exercises_seconds": 180,
+    "default_timer_continues_through_exercise": true
+   },
+   "id": "7c3af18a-4e88-538c-06d9-1355e3d50491"
+  },
+  "csrf": "[REDACTED]"
+ },
+ "note": "login via Enter"
+}

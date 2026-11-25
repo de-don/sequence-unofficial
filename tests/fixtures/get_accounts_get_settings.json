@@ -1,0 +1,14 @@
+{
+ "method": "GET",
+ "path": "/accounts/get_settings",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": {
+  "showAdmin": false,
+  "showCoaching": false,
+  "isCoach": false,
+  "isClient": false
+ },
+ "note": "settings"
+}

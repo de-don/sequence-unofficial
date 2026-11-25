@@ -1,0 +1,13 @@
+{
+ "method": "GET",
+ "path": "/api/v1/strava/status",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": {
+  "connected": false,
+  "athlete_id": null,
+  "connected_at": null
+ },
+ "note": "workout detail"
+}

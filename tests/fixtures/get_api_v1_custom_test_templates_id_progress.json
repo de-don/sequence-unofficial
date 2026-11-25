@@ -1,0 +1,111 @@
+{
+ "method": "GET",
+ "path": "/api/v1/custom_test_templates/{id}/progress",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": {
+  "template": {
+   "id": "e2cf1328-1d9c-8b58-e41d-e1d4b55bb02b",
+   "user_id": "7c3af18a-4e88-538c-06d9-1355e3d50491",
+   "name": "text",
+   "description": "text",
+   "fields": [
+    {
+     "key": "11d584b5-587e-2b32-80b7-bea320ce507a",
+     "type": "number",
+     "unit": "kg",
+     "label": "text",
+     "options": null,
+     "ordered": false,
+     "headline": false,
+     "position": 0,
+     "required": false,
+     "direction": "higher",
+     "percentage": false,
+     "description": "text"
+    },
+    {
+     "key": "e97500ff-0dde-694e-5b78-fa056add7d7d",
+     "type": "number",
+     "unit": "kg",
+     "label": "text",
+     "options": null,
+     "ordered": false,
+     "headline": false,
+     "position": 1,
+     "required": false,
+     "direction": "higher",
+     "percentage": false,
+     "description": "text"
+    }
+   ],
+   "fields_version": 1,
+   "coaching": false,
+   "source_template_id": null
+  },
+  "count": 0,
+  "metrics": [
+   {
+    "id": "723fc942727512ff0c45",
+    "field": {
+     "key": "11d584b5-587e-2b32-80b7-bea320ce507a",
+     "type": "number",
+     "unit": "kg",
+     "label": "text",
+     "options": null,
+     "ordered": false,
+     "headline": false,
+     "position": 0,
+     "required": false,
+     "direction": "higher",
+     "percentage": false,
+     "description": "text"
+    },
+    "retired": false,
+    "count": 0,
+    "first": null,
+    "latest": null,
+    "previous": null,
+    "best": null,
+    "change": null,
+    "previous_change": null
+   },
+   {
+    "id": "1b30964a6884e61014a8",
+    "field": {
+     "key": "e97500ff-0dde-694e-5b78-fa056add7d7d",
+     "type": "number",
+     "unit": "kg",
+     "label": "text",
+     "options": null,
+     "ordered": false,
+     "headline": false,
+     "position": 1,
+     "required": false,
+     "direction": "higher",
+     "percentage": false,
+     "description": "text"
+    },
+    "retired": false,
+    "count": 0,
+    "first": null,
+    "latest": null,
+    "previous": null,
+    "best": null,
+    "change": null,
+    "previous_change": null
+   }
+  ],
+  "history": [],
+  "attempts": [],
+  "metric_id": "723fc942727512ff0c45",
+  "points": [],
+  "history_points": [],
+  "selected": null,
+  "comparison": null,
+  "comparison_rows": [],
+  "feedback": []
+ },
+ "note": "test progress"
+}

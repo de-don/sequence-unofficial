@@ -1,0 +1,9 @@
+{
+ "method": "GET",
+ "path": "/api/v1/metrics/activity_all_time",
+ "status": 200,
+ "query": "activity_id=bd64857f-eb25-f961-8283-e044bb93d67e",
+ "request": null,
+ "response": {},
+ "note": "workout detail"
+}

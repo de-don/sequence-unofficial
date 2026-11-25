@@ -1,0 +1,82 @@
+{
+ "method": "GET",
+ "path": "/api/v1/dashboard",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": {
+  "upcoming_workouts": [
+   {
+    "id": "5bdbecc0-d8da-4104-7eba-81e08be83902",
+    "scheduled_at": "2026-11-25",
+    "activity_name": "text",
+    "category_name": "text",
+    "category_hex_colour": "text"
+   },
+   {
+    "id": "e80c7c16-c94d-50d3-5bd9-888207e7ecc1",
+    "scheduled_at": "2026-11-26",
+    "activity_name": "text",
+    "category_name": "text",
+    "category_hex_colour": "text"
+   }
+  ],
+  "goals_in_progress": [
+   {
+    "id": "7626331a-6ac7-db6e-8a98-46d4ea9ff52f",
+    "title": "text",
+    "style": "short_term"
+   }
+  ],
+  "snapshot": {
+   "demo": false,
+   "sessions_completed": 2,
+   "days_on_rock": 0,
+   "rest_days": 1,
+   "session_breakdown": {
+    "categories": [
+     {
+      "id": "4483d0fd-ae95-1155-aa14-9a18181f0126",
+      "name": "text",
+      "hex_colour": "text",
+      "total": 1,
+      "time": 2.0,
+      "total_miss": 0,
+      "time_miss": 0
+     },
+     {
+      "id": "e8dd20b7-6e62-b7d8-15ab-a3901ba27c32",
+      "name": "text",
+      "hex_colour": "text",
+      "total": 1,
+      "time": 0.3,
+      "total_miss": 1,
+      "time_miss": 0.3
+     }
+    ],
+    "hours": 2.3,
+    "change": "text"
+   },
+   "felt": {
+    "value": "text",
+    "change": "text"
+   },
+   "motivated": {
+    "value": "text",
+    "change": "text"
+   },
+   "performed": {
+    "value": "text",
+    "change": "text"
+   },
+   "rpe": {
+    "value": "text",
+    "change": "text"
+   }
+  },
+  "recent_milestones": [],
+  "recent_notes": [],
+  "recent_comments": []
+ },
+ "note": "live read-only run 2026-11-25"
+}

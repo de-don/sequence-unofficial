@@ -1,0 +1,20 @@
+{
+ "method": "GET",
+ "path": "/accounts/status",
+ "status": 200,
+ "query": "",
+ "request": null,
+ "response": {
+  "valid_trial": true,
+  "valid": true,
+  "trial": true,
+  "subscribed": false,
+  "plan": "text",
+  "platform": "web",
+  "trial_ended": false,
+  "trial_start_date": null,
+  "trial_end_date": null,
+  "trial_count": 43
+ },
+ "note": "settings"
+}

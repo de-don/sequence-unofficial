@@ -1,0 +1,15 @@
+captures/
+.env
+*.har
+session.json
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+.opus/
+fixtures_raw/
+.coverage

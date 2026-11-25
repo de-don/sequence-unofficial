@@ -1,0 +1,66 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sequence-unofficial"
+dynamic = ["version"]
+description = "Unofficial Python client and CLI for the Sequence climbing-training web app. Not affiliated with Sequence."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+keywords = ["sequence", "climbing", "training", "unofficial", "api-client"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+dependencies = [
+    "httpx>=0.27",
+    "pydantic>=2.6",
+    "platformdirs>=4",
+    "typer>=0.12",
+    "rich>=13",
+]
+
+[project.optional-dependencies]
+keyring = ["keyring>=24"]
+dev = ["pytest>=8", "pytest-cov>=5", "respx>=0.21", "ruff>=0.6", "pyright>=1.1.380"]
+
+[project.scripts]
+sequence-unofficial = "sequence_unofficial.cli:app"
+squ = "sequence_unofficial.cli:app"
+
+[tool.hatch.version]
+path = "src/sequence_unofficial/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sequence_unofficial"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["live: talks to the real service (needs SEQUENCE_LIVE=1); never run in CI"]
+
+[tool.ruff]
+line-length = 110
+extend-exclude = ["tools/sanitize_captures.py", "docs", ".opus", "*.md"]  # standalone script, kept as-is
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pyright]
+include = ["src", "tests", "tools"]
+exclude = ["tools/sanitize_captures.py"]
+pythonVersion = "3.10"
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "strict"
+reportMissingTypeStubs = false
