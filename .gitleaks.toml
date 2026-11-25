@@ -1,0 +1,15 @@
+title = "sequence-unofficial gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Sanitized samples: UUIDs under a \"key\" field are fake ids from tools/fake_uuids.txt (checked by tools/lint_samples.py), not API keys."
+paths = [
+  '''docs/samples/samples\.json''',
+  '''docs/api\.md''',
+  '''tests/fixtures/.*\.json''',
+]
+regexes = [
+  '''"key":\s*"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"''',
+]
